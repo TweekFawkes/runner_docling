@@ -1,13 +1,12 @@
 runner:
-  name: Convert File From PDF to Markdown
-  description: Convert files to Markdown. Supports PDFs.
+  name: Convert PDF File to Markdown
+  description: Convert PDF File to Markdown.
   version: 0.0.1
 
 build:
   memorysize: 1280
   commands: |
     echo "START: Building the runner"
-    apt install -y --no-install-recommends ffmpeg
     git clone https://github.com/DS4SD/docling.git /opt/docling
     cd /opt/docling/ && python3 -m pip install -e .
     ls -alF /opt/
